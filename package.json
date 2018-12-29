@@ -1,0 +1,23 @@
+{
+  "name": "promise-map",
+  "version": "0.1.0",
+  "description": "Promise.all implementation that takes an object literal",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "node --experimental-modules test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fwilkerson/promise-map.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fwilkerson/promise-map/issues"
+  },
+  "homepage": "https://github.com/fwilkerson/promise-map#readme",
+  "devDependencies": {
+    "kleur": "^3.0.1"
+  }
+}
