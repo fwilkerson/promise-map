@@ -1,5 +1,5 @@
 {
-  "name": "promise-map",
+  "name": "@aberration/promise-map",
   "version": "0.1.0",
   "description": "Promise.all implementation that takes an object literal",
   "main": "index.mjs",
@@ -11,8 +11,8 @@
     "url": "git+https://github.com/fwilkerson/promise-map.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Frank A. Wilkerson",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/fwilkerson/promise-map/issues"
   },
@@ -20,5 +20,6 @@
   "devDependencies": {
     "driven": "git+https://github.com/fwilkerson/driven.git",
     "kleur": "^3.0.1"
-  }
+  },
+  "dependencies": {}
 }
