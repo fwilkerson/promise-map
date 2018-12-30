@@ -18,8 +18,9 @@
   },
   "homepage": "https://github.com/fwilkerson/promise-map#readme",
   "devDependencies": {
-    "driven": "git+https://github.com/fwilkerson/driven.git",
-    "kleur": "^3.0.1"
+    "driven": "git+https://github.com/fwilkerson/driven.git"
   },
-  "dependencies": {}
+  "optionalDependencies": {
+    "kleur": "^3.0.1"
+  }
 }

@@ -1,7 +1,14 @@
-export function all(map) {
+/**
+ * Promise.all implementation that takes an object literal instead of
+ * an array. If a value is not Promise like the value is returned.
+ *
+ * @param {Object} obj - The key value pair of promises to be awaited
+ * @returns {Promise<Object>}
+ */
+export function all(obj) {
   return new Promise((resolve, reject) => {
     let result = {},
-      keys = Object.keys(map),
+      keys = Object.keys(obj),
       length = keys.length,
       count = 0;
 
@@ -12,9 +19,11 @@ export function all(map) {
 
     while (keys.length > 0) {
       let key = keys.shift();
-      if (map[key] !== null && !!map[key].then) {
-        map[key].then(data => completed(key, data)).catch(reject);
-      } else completed(key, map[key]);
+      if (obj[key] !== null && !!obj[key].then) {
+        obj[key].then(data => completed(key, data)).catch(reject);
+      } else completed(key, obj[key]);
     }
   });
 }
+
+export default { all };

@@ -1,6 +1,6 @@
 import { it, expect, run } from "driven";
 
-import { all } from "./index.mjs";
+import keyedPromise from "./index.mjs";
 
 const sleep = ms => new Promise(res => setTimeout(res, ms));
 async function mockFunc(result, ms = 10) {
@@ -16,7 +16,7 @@ it("should run the map of promises concurrently", async () => {
     four: false
   };
 
-  const result = await all(promiseMap);
+  const result = await keyedPromise.all(promiseMap);
 
   expect(result.one).toBe("one");
   expect(result.two).toBe("two");
